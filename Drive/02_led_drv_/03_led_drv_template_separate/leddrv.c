@@ -52,7 +52,6 @@ static ssize_t led_drv_write(struct file *file, const char __user * buf, size_t 
 	return 0;
 }
 
-
 static int led_drv_open(struct inode *node, struct file *file)
 {
 	int minor = iminor(node);
@@ -73,7 +72,6 @@ static int led_drv_close(struct inode *node, struct file *file)
 
 /*2、定义自己的 file_operations结构体*/
 static struct file_operations led_drv = {
-
 	 .owner = THIS_MODULE,
 	 .open = led_drv_open,
 	 .read = led_drv_read,
@@ -128,33 +126,6 @@ module_init(led_init);   	//修饰为入口函数
 module_exit(led_exit);
 
 MODULE_LICENSE("GPL");	//遵守GPL协议
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

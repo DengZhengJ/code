@@ -29,23 +29,19 @@ static int board_demo_led_init (int which) /* 初始化LED, which-哪个LED */
     printk("init gpio: group %d, pin %d\n", GROUP(g_ledpins[which]), PIN(g_ledpins[which]));
     switch(GROUP(g_ledpins[which]))
     {
-        case 0:
-        {
+        case 0:{
             printk("init pin of group 0 ...\n");
             break;
         }
-        case 1:
-        {
+        case 1:{
             printk("init pin of group 1 ...\n");
             break;
         }
-        case 2:
-        {
+        case 2:{
             printk("init pin of group 2 ...\n");
             break;
         }
-        case 3:
-        {
+        case 3:{
             printk("init pin of group 3 ...\n");
             break;
         }
@@ -61,23 +57,19 @@ static int board_demo_led_ctl (int which, char status) /* 控制LED, which-哪�
 
     switch(GROUP(g_ledpins[which]))
     {
-        case 0:
-        {
+        case 0:{
             printk("set pin of group 0 ...\n");
             break;
         }
-        case 1:
-        {
+        case 1:{
             printk("set pin of group 1 ...\n");
             break;
         }
-        case 2:
-        {
+        case 2:{
             printk("set pin of group 2 ...\n");
             break;
         }
-        case 3:
-        {
+        case 3:{
             printk("set pin of group 3 ...\n");
             break;
         }

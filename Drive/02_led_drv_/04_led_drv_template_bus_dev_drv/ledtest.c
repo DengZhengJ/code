@@ -1,4 +1,3 @@
-
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -30,7 +29,7 @@ int main(int argc, char **argv)
 
 	/* 3. 写文件 */
 	if (0 == strcmp(argv[2], "on")){
-		status = 1;
+		status = 1;				//表示点亮LED
 		write(fd, &status, 1);
 	}
 	else{

@@ -103,7 +103,6 @@ static int __init led_init(void)
 	printk("%s %s line %d\n", __FILE__, __FUNCTION__, __LINE__);
 	major = register_chrdev(0, "100ask_led", &led_drv);  /* /dev/led */
 
-
 	led_class = class_create(THIS_MODULE, "100ask_led_class");
 	err = PTR_ERR(led_class);
 	if (IS_ERR(led_class)) {
@@ -124,9 +123,7 @@ static void __exit led_exit(void)
 	unregister_chrdev(major, "100ask_led");
 }
 
-
 /* 7. 其他完善：提供设备信息，自动创建设备节点                                     */
-
 module_init(led_init);
 module_exit(led_exit);
 MODULE_LICENSE("GPL");
